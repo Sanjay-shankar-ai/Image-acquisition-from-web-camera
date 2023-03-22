@@ -48,17 +48,14 @@ cv2.destroyAllWindows()
 
 ## ii) Display the video
 ```
-import numpy as np
 import cv2
-
-cap = cv2.VideoCapture(0)
-
+videocaptureobject=cv2.VideoCapture(0)
 while True:
-    ret, frame = cap.read()
-    cv2.imshow('frame', frame)
-    if cv2.waitKey(1) == ord('s'):
+    ret,frame=videocaptureobject.read()
+    cv2.imshow("example.jpg",frame)
+    if cv2.waitKey(1) == ord('q'):
         break
-cap.release()
+videocaptureobject.release()
 cv2.destroyAllWindows()
 ```
 
